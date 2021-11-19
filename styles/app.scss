@@ -1,0 +1,46 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: rgb(85, 85, 85);
+}
+
+header {
+  img {
+    height: 60px;
+    width: 300px;
+  }
+}
+
+main {
+  .my-poster {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+  }
+
+  .small-img {
+    width: 10%;
+  }
+
+  .my-card {
+    position: relative;
+    height: 620px;
+
+    .overlay {
+      position: absolute;
+      opacity: 0;
+      color: white;
+      background-color: black;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow-y: auto;
+      transition: opacity 0.4s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

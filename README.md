@@ -1,5 +1,9 @@
 # vue-boolflix
 
+## Api doc
+```
+https://www.themoviedb.org/
+```
 ## Project setup
 ```
 npm install
