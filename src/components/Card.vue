@@ -5,18 +5,9 @@
       alt="poster"
       class="my-poster"
     />
-    <div
-      class="
-        overlay
-        d-flex
-        flex-column
-        justify-content-evenly
-        align-items-center
-        px-3
-      "
-    >
-      <h3 class="mb-0">{{ film.title }}</h3>
-      <h5 class="mb-0" v-if="film.title !== film.original_title">
+    <div class="overlay d-flex flex-column align-items-center p-3">
+      <h3>{{ film.title }}</h3>
+      <h5 v-if="film.title !== film.original_title">
         {{ film.original_title }}
       </h5>
       <img
@@ -36,9 +27,10 @@
           :key="'A' + i"
         ></i
       ></span>
-      <p class="text-center mb-0">
+      <p class="text-center mt-3">
         <span class="fw-bold mb-0">Plot:</span><br />{{ film.overview }}
       </p>
+      <p v-if="film.overview === ''">No plot was found for this show.</p>
     </div>
   </div>
 </template>
